@@ -6,9 +6,14 @@ public class Main {
 
         Calculator calc = Calculator.instance.get();
 
-        int a = calc.div.apply(5, 0);
-        int b = calc.abs.apply(5);
+        try {
+            int a = calc.plus.apply(1, 2);
+            int b = calc.minus.apply(1,1);
+            int c = calc.div.apply(a, b);
 
-        calc.println.accept(b);
+            calc.println.accept(c);
+        } catch (ArithmeticException e) {
+            System.out.println("Деление на ноль");
+        }
     }
 }
