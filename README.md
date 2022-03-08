@@ -8,5 +8,5 @@
 
 ### Тема 1.2 Stream API. Потоки, повторные вызовы, основные методы
 
-* Задание 1:
-* Задание 2: 
+* Задание 1: https://github.com/metakotleta/netology/tree/master/src/com/rvukolov/javacore/stream_api/hw21
+* Задание 2: https://github.com/metakotleta/netology/tree/master/src/com/rvukolov/javacore/stream_api/hw22
