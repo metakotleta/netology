@@ -43,6 +43,6 @@ public class Main {
                 .map(Person::toString)
                 .collect(Collectors.toList());
         System.out.println(workers);
-    }
+
     }
 }
