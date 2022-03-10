@@ -18,6 +18,7 @@ public class Main {
             );
         }
 
+
         //Task 1
         long underAgeCount = persons.stream()
                 .filter(x -> x.getAge() < 18)
@@ -42,5 +43,6 @@ public class Main {
                 .map(Person::toString)
                 .collect(Collectors.toList());
         System.out.println(workers);
+    }
     }
 }
