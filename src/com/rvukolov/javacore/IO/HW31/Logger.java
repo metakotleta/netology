@@ -27,4 +27,8 @@ public class Logger {
             info(string);
         }
     }
+
+    public String getLog() {
+        return log.toString();
+    }
 }

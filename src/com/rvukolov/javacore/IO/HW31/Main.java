@@ -17,11 +17,14 @@ public class Main {
         File gamesResDrawables = example.makeDir(gamesRes, "drawables");
         File gamesResVectors = example.makeDir(gamesRes, "vectors");
         File gamesResIcons = example.makeDir(gamesRes, "icons");
-        File tempLogTxt = example.makeFile(gamesTemp, "log.txt");
-
-        File mainMainJava = example.makeFile(gamesSrcMain, "Main.java");
-        File mainUtilsJava = example.makeFile(gamesSrcMain, "Utils.java");
-
-        example.writeLogFile(tempLogTxt);
+        try {
+            File tempLogTxt = example.makeFile(gamesTemp, "log.txt");
+            File mainMainJava = example.makeFile(gamesSrcMain, "Main.java");
+            File mainUtilsJava = example.makeFile(gamesSrcMain, "Utils.java");
+            example.writeLogFile(tempLogTxt);
+        } catch (NullPointerException e) {
+            System.out.println("Не удалось создать файлы\n");
+            System.out.println(example.logger.getLog());
+        }
     }
 }

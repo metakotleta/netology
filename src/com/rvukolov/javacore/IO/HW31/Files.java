@@ -15,8 +15,8 @@ public class Files {
             }
             return child;
         } catch (IOException e) {
-            logger.info("Файл не создан: " + child.getAbsolutePath() + "\n" + e.getMessage());
-            return null; // мб стоит обработать выше? не могу натестировать с неудачным созданием
+            logger.info("Файл не создан: " + child.getAbsolutePath() + ": " + e.getMessage());
+            return null;
         }
     }
 
@@ -24,6 +24,8 @@ public class Files {
         File child = new File(parent, name);
         if (child.mkdir()) {
             logger.info("Директория создана: " + child.getAbsolutePath());
+        } else {
+            logger.info("Директория не создана: " + child.getAbsolutePath());
         }
         return child;
     }
@@ -32,6 +34,8 @@ public class Files {
         File child = new File(parentPath, name);
         if (child.mkdir()) {
             logger.info("Директория создана: " + child.getAbsolutePath());
+        } else {
+            logger.info("Директория не создана: " + child.getAbsolutePath());
         }
         return child;
     }
