@@ -21,7 +21,6 @@ public class Logger {
     public void writeLog(File input) {
         String string = log.toString();
         try (FileWriter fw = new FileWriter(input)) {
-                fw.write(log.toString());
                 fw.write(string);
                 fw.flush();
         } catch(IOException e) {
