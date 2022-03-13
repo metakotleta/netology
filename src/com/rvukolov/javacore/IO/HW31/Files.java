@@ -16,7 +16,7 @@ public class Files {
             return child;
         } catch (IOException e) {
             logger.info("Файл не создан: " + child.getAbsolutePath() + ": " + e.getMessage());
-            return null;
+            return null; // обработан
         }
     }
 
