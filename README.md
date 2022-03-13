@@ -10,3 +10,9 @@
 
 * Задание 1: https://github.com/metakotleta/netology/tree/master/src/com/rvukolov/javacore/stream_api/hw21
 * Задание 2: https://github.com/metakotleta/netology/tree/master/src/com/rvukolov/javacore/stream_api/hw22
+
+### Тема 1.3 Потоки ввода-вывода. Работа с файлами. Сериализация
+
+* Задание 1: https://github.com/metakotleta/netology/tree/master/src/com/rvukolov/javacore/IO/HW31
+* Задание 2: https://github.com/metakotleta/netology/tree/master/src/com/rvukolov/javacore/IO/HW32
+* Задание 3: https://github.com/metakotleta/netology/tree/master/src/com/rvukolov/javacore/IO/HW33
