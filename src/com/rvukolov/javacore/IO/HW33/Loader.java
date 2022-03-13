@@ -1,11 +1,26 @@
 package com.rvukolov.javacore.IO.HW33;
 
 import java.io.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Pattern;
 import java.util.zip.ZipEntry;
 import java.util.zip.ZipInputStream;
 //import com.rvukolov.javacore.IO.HW32.GameProgress;
 
 public class Loader {
+
+    public List<String> getFileNames() {
+        String[] saveFiles = com.rvukolov.javacore.IO.HW32.Main.SAVE_DIR.list();
+        List<String> datFiles = new ArrayList<>();
+
+        for (int i = 0; i < saveFiles.length; i++) {
+            if (Pattern.matches(com.rvukolov.javacore.IO.HW32.Main.saveFileMask, saveFiles[i])) {
+                datFiles.add(saveFiles[i]);
+            }
+        }
+        return datFiles;
+    }
 
     public void unZip(String zipName) {
         try(ZipInputStream zis = new ZipInputStream(new FileInputStream(Main.SAVE_DIR + File.separator + zipName))) {
